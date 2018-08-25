@@ -81,12 +81,12 @@ router.post('/signup', (req, res, next) => {
 
       transporter
         .sendMail({
-          from: 'Gigx 👻 <gigxapp@gmail.com>',
+          from: 'NodeFlix <nodeflix@gmail.com>',
           to: email,
-          subject: 'Your Gigx account has been created',
+          subject: 'Your NodeFlix account has been created',
           text:
-            'Welcome to gigx! Everything is setup to view all the concerts from your favourite artists. Remember you can watch live concerts and previous ones. Also keep in mind you can upload your favourite classic concerts to our page. Take a look to our live concerts clicking here. Rock on!',
-          html: `<h1>Welcome to Gigx</h1> <p>Everything is setup to view all the concerts from your favourite artists. Remember you can watch live concerts and previous ones. Also keep in mind you can upload your favourite classic concerts to our page.<p> <p>Take a look to our live concerts <a href='https://gig.herokuapp.com'>clicking here.<a> Rock on!<p>`
+            'Welcome to NodeFlix! Hope you enjoy our extensive movie and TV show library! Visit now at https://nodeflix.com',
+          html: `<h1>Welcome to NodeFlix!</h1> <p>Hope you enjoy our extensive movie and TV show library!</p><p>Browse our library now by <a href='https://nodeflix.com'>clicking here.<a> Rock on!</p>`
         })
         .then(info => console.log(info))
         .catch(error => console.log(error));

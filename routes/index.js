@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
   if (req.session.currentUser) {
     return res.redirect('/listings');
   }
-  res.render('index', { title: 'Gigx - The home of online concerts' });
+  res.render('index', { title: 'NodeFlix - Open Source Netflix Clone' });
 });
 
 module.exports = router;

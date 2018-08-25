@@ -33,7 +33,7 @@ const listingSchema = new Schema({
   },
   imageUrl: {
     type: String,
-    default: '/images/concert-default.jpeg'
+    default: '/images/listing-default.jpg'
   },
   artist: {
     type: String,

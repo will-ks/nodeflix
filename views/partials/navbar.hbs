@@ -7,8 +7,7 @@
     </div>
     <div id="navbar-links">
       {{#unless currentUser}}
-        <a href="/users/auth?mode=signup">Signup</a>
-        <a href="/users/auth?mode=login">Login</a>
+        <a href="/users/auth?mode=login">Log In</a>
         {{else}}
           <form id="search-bar" action="/listings/search" method="POST">
             <input type="search" placeholder="Search" name="search">
