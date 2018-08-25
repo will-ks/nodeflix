@@ -23,7 +23,12 @@ const app = express();
 
 // --- Configurations --- //
 // -- Database
-mongoose.connect(process.env.MONGODB_URI);
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  console.log(".env file not set up correctly. Please create .env file in root directory (follow .env_example structure)");
+  process.exit();
+}
 // -- View engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
