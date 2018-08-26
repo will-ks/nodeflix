@@ -4,23 +4,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const genres = [
-  'Classical',
-  'Blues',
-  'Rock',
-  'Pop',
-  'Hip-hop',
-  'Reggae',
-  'Jazz',
-  'Country',
+  'Action',
+  'Adventure',
+  'Comedy',
+  'Romance',
+  'Horror',
+  'Thriller',
+  'Sci-Fi',
+  'Drama',
   'World',
-  'Electronic',
-  'Metal',
-  'Indie',
-  'R&B',
-  'Latin'
+  'Sports'
 ];
 
-const sources = ['Youtube', 'HLS', 'RTMP'];
+const sources = ['Youtube', 'HLS'];
 
 const listingSchema = new Schema({
   title: {
@@ -35,7 +31,7 @@ const listingSchema = new Schema({
     type: String,
     default: '/images/listing-default.jpg'
   },
-  artist: {
+  description: {
     type: String,
     required: true
   },
@@ -45,19 +41,11 @@ const listingSchema = new Schema({
     required: true
   },
   year: {
-    type: Number
+    type: Number,
+    required: true
   },
   duration: {
     type: Number
-  },
-  location: {
-    type: String
-  },
-  live: {
-    type: Boolean
-  },
-  dateTime: {
-    type: Date
   },
   source: {
     type: String,

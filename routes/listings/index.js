@@ -64,7 +64,9 @@ router.get(
 router.get('/add', requireLoggedInUser, (req, res, next) => {
   const data = {
     messages: req.flash('error'),
-    title: 'Add a listing'
+    title: 'Add a listing',
+    genres: Listing.schema.path('genre').enumValues,
+    sources: Listing.schema.path('source').enumValues
   };
   res.render('listings/add', data);
 });
