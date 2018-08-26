@@ -1,8 +1,8 @@
 # MongoDB Instructions
 
-* Use database "gigx"
+* Use database "nodeflix" (or whatever db name you've used)
 
-   `use gigx`
+   `use nodeflix`
 
 * Create indexes:
 
